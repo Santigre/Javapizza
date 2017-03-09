@@ -1,0 +1,97 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>PIZZA!!!!</title>
+		<link href= "./css/piza.css" rel = "stylesheet" type = "text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <header> <h1 id="Banner">Tigers Pizza Palace</h1></header>
+            <div class="menu">
+                <div>
+                    <img id="pizza" src="http://www.athenaspizzaamherst.com/wp-content/uploads/2013/05/front-1-1008x500.jpg">
+                </div>
+                <table class="menu">
+                    <tr>
+                        <th colspan="4">Size</th>
+                    </tr>
+                    <tr>
+                        <td><input class="size" type="radio" name="size" value="Personal">Personal</td>
+                        <td><input class="size" type="radio" name="size" value="Medium">Medium</td>
+                        <td><input class="size" type="radio" name="size" value="Large">Large</td>
+                        <td><input class="size" type="radio" name="size" value="XLarge">XLarge</td>
+                    </tr>
+                </table>
+                <table class="menu">
+                    <tr>
+                        <th colspan="6">Meats</th>
+                    </tr>
+                    <tr>
+                        <td><input class="Meats" type="checkbox" name="Meats" value="Pepperoni">Pepperoni </td>
+                        <td><input class="Meats" type="checkbox" name="Meats" value="Sausage">Sausage </td>
+                        <td><input class="Meats" type="checkbox" name="Meats" value="Canadian Bacon">Canadian Bacon </td>
+                        <td><input class="Meats" type="checkbox" name="Meats" value="Ground Beef">Ground Beef </td>
+                        <td><input class="Meats" type="checkbox" name="Meats" value="Anchovy">Anchovy </td>
+                        <td><input class="Meats" type="checkbox" name="Meats" value="Chicken">Chicken </td>
+                    </tr>
+                </table>
+                <table class="menu">
+                    <tr>
+                        <th colspan="3">Cheese</th>
+                    </tr>
+                    <tr>
+                        <td><input class="Cheese" type="radio" name="Cheese" value="Regualer">Regualar</td>
+                        <td><input class="Cheese" type="radio" name="Cheese" value="NoCheese">No Cheese</td>
+                        <td><input class="Cheese" type="radio" name="Cheese" value="Extra">Extra</td>
+                    </tr>
+                </table>
+                <table class="menu" >
+                    <tr>
+                        <th colspan="5">Crust</th>
+                    </tr>
+                    <tr>
+                        <td><input class ="Crust" type="radio" name="Crust" value="Plain">Plain</td>
+                        <td><input iclass ="Crust" type="radio" name="Crust" value="Garlic Butter">Garlic Butter</td>
+                        <td><input class="Crust" type="radio" name="Crust" value="Garlic Butter">Cheese stuffed Crust</td>
+                        <td><input class="Crust" type="radio" name="Crust" value="Spicy">Spicey</td>
+                        <td><input class="Crust" type="radio" name="Crust" value="House Special">House Special</td>
+                    </tr>
+                </table>
+                <table class="menu" >
+                    <tr>
+                        <th colspan="4">Sauce</th>
+                    </tr>
+                    <tr>
+                        <td><input class="Sauce" type="radio" name="Sauce" value="Marinara">Marinara</td>
+                        <td><input class="Sauce" type="radio" name="Sauce" value="White">White</td>
+                        <td><input class="Sauce" type="radio" name="Sauce" value="Barbeque">Barbeque</td>
+                        <td><input class="Sauce" type="radio" name="Sauce" value="No Sauce">No Sauce</td>
+                    </tr>
+                </table>
+                <table class="menu" >
+                    <tr>
+                        <th colspan="8">Veggies</th>
+                    </tr>
+                    <tr>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="Tomatoes">Tomatoes</td>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="Onions">Onions</td>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="Olives">Olives</td>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="Green Peppers">Green Peppers</td>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="Mushrooms">Mushrooms</td>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="Pineapple">Pineapple</td>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="SPinach">Spinach</td>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="Jalapenos">Jalapenos</td>
+                    </tr>
+                </table>
+            </div>
+            <input id="btnOrder" type="button" onclick="getReceipt()" 
+				value="Place Order">
+            <div class="cart" >
+                <div class= "cart" id="showOrder"></div>
+                <div class= "cart" id="totalPrice"></div>
+            </div>
+        </div>
+       <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+        <script type="text/javascript" src="./java/pizza_java.js"></script>
+    </body>
+</html>
