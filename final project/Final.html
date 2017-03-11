@@ -79,7 +79,7 @@
                         <td><input class="Veggies" type="checkbox" name="Veggies" value="Green Peppers">Green Peppers</td>
                         <td><input class="Veggies" type="checkbox" name="Veggies" value="Mushrooms">Mushrooms</td>
                         <td><input class="Veggies" type="checkbox" name="Veggies" value="Pineapple">Pineapple</td>
-                        <td><input class="Veggies" type="checkbox" name="Veggies" value="SPinach">Spinach</td>
+                        <td><input class="Veggies" type="checkbox" name="Veggies" value="Spinach">Spinach</td>
                         <td><input class="Veggies" type="checkbox" name="Veggies" value="Jalapenos">Jalapenos</td>
                     </tr>
                 </table>
@@ -87,8 +87,20 @@
             <input id="btnOrder" type="button" onclick="getReceipt()" 
 				value="Place Order">
             <div class="cart" >
-                <div class= "cart" id="showOrder"></div>
-                <div class= "cart" id="totalPrice"></div>
+                <table>
+                    <tr>
+                        <th id="yourOrder">Your order</th>
+                        <th id="subTotal">Subtotals</th>
+                    </tr>
+                    <tr>
+                        <td id="items"></td>
+                        <td id="itmeSub"></td>
+                    </tr>
+                    <tr>
+                        <td id="total"></td>
+                        <td id="price"></td>
+                    </tr>
+                </table>
             </div>
         </div>
        <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->

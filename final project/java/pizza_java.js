@@ -1,3 +1,4 @@
+
 /*$(document).ready(function(){ */
     function getReceipt() {
         var heading1 = "<h2>Your order</h2>";
@@ -27,9 +28,11 @@
 	   console.log(selectedSize+" = $"+sizeTotal+".00");
 	   console.log("size heading1: "+heading1);
 	   console.log("subtotal: $"+runningTotal+".00");
-	   getMeat(runningTotal,heading1);
+       document.getElementById("items").innerHTML= selectedSize;
+       document.getElementById("itemSub").innerHTML= sizeTotal;
+	   /*getMeat(runningTotal,heading1);*/
     };
-    
+    /*
     function getMeat(runningTotal, heading1) {
         var meatTotal = 0;
         var selectedMeat = [];
@@ -82,5 +85,5 @@
         document.getElementById("showOrder").innerHTML= heading1;
         document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
         
-    }
+    }*/
 /*}); */
