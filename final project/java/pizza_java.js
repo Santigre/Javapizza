@@ -1,6 +1,8 @@
+
 /*$(document).ready(function(){ */
     function getReceipt() {
-        var heading1 = "<h2>Your order</h2>";
+        var heading1 = "";
+        var subTotals = null ;
         var runningTotal = 0;
         var sizeTotal = 0; 
         var sizeArray = document.getElementsByClassName("size");
@@ -24,13 +26,14 @@
             sizeTotal = 16;
         }
        runningTotal = sizeTotal;
+       subTotals = subTotals + sizeTotal + "<br>";
 	   console.log(selectedSize+" = $"+sizeTotal+".00");
 	   console.log("size heading1: "+heading1);
-	   console.log("subtotal: $"+runningTotal+".00");
-	   getMeat(runningTotal,heading1);
+	   console.log("subtotal: $"+sizeTotal+".00");
+       document.getElementById("itemSub").innerHTML= "$"+sizeTotal+".00";
+	   getMeat(runningTotal,heading1,subTotals);
     };
-    
-    function getMeat(runningTotal, heading1) {
+    function getMeat(runningTotal, heading1, subTotals) {
         var meatTotal = 0;
         var selectedMeat = [];
         var meatArray = document.getElementsByClassName("Meats");
@@ -50,19 +53,25 @@
             meatTotal = 0;
         }
         runningTotal = (runningTotal + meatTotal);
+        subTotals = subTotals + meatTotal + "<br>";
         console.log("total selected meat items: "+meatCount);
         console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
         console.log("meat heading1: "+heading1);
+        console.log("subtotal: $"+meatTotal+".00");
+        document.getElementById("items").innerHTML = heading1;
+        document.getElementById("itemSub").innerHTML = subTotals;
+        document.getElementById("price").innerHTML= "$"+runningTotal+".00";
         getCheese(runningTotal + heading1)
+        
     }
-    function getCheese(runningTotal, heading1){
+/*
+    function getCheese(runningTotal, heading1, subTotals){
         var cheeseTotal = 0;
         var cheeseArray = document.getElementsByClassName("Cheese");
         
         for (var c = 0; c < cheeseArray.length; c++){
             if (cheeseArray[c].checked){    
                 var selectedCheese = cheeseArray[c].value;
-                heading1 = heading1 + selectedCheese + "<br>";
             }
         }
         if(selectedCheese === "Regualar"){
@@ -77,10 +86,9 @@
         
         runningTotal = (runningTotal + cheeseTotal);
         console.log(selectedCheese+" = $"+cheeseTotal+".00");
-        console.log("cheese heading1: "+heading1);
-        console.log("Purchase Total: "+"$"+runningTotal+".00");
-        document.getElementById("showOrder").innerHTML= heading1;
-        document.getElementById("totalPrice").innerHTML = "</h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
+        document.getElementById("items").innerHTML = heading1;
+        document.getElementById("itemSub").innerHTML = subTotals;
+        document.getElementById("price").innerHTML= "$"+runningTotal+".00";
         
-    }
+    } */
 /*}); */
