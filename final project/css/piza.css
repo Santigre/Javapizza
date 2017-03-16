@@ -5,7 +5,7 @@ body{
 .container{
     background-color: #ede6ce;
 	width: 80%;
-	height: auto;
+	height: 900px;
     padding-bottom: 2%;
 	margin-left: 10%;
     border: 5px solid #d80808;
@@ -15,8 +15,11 @@ body{
 #Banner{
 	text-align: center;
 	color: #fff;
-	background-color: #d80808;
+	background-color: #ede6ce;
 	
+}
+#tiger{
+    background-color: #d80808;
 }
 
 img{
@@ -32,7 +35,33 @@ img{
 	width: 100%;
 }
 
+ul{
+    list-style: none;
+    display: inline-flex;
+}
+
 .cart{
     width: 100%;
     text-align: center;
+    background-color: #ede6ce;
+    display: inline-flex;
+}
+
+#showText1{
+    width: 50%;
+    border: 2px solid #d80808;
+    background-color: #ede6ce;
+}
+
+#showText2{
+    width: 50%;
+    border: 2px solid #d80808;
+    background-color: #ede6ce;
+}
+
+#totalPrice{
+    width: 99.6%;
+    text-align: center;
+    border: 2px solid #d80808;
+    background-color: #ede6ce;
 }
